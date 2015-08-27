@@ -6,11 +6,68 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */; settings = {ASSET_TAGS = (); }; };
+		053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		053BEDBC1B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05818F861A685AEA0072A469;
+			remoteInfo = GoogleMock;
+		};
+		053BEDBE1B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05E96ABD1A68600C00204102;
+			remoteInfo = gmock;
+		};
+		053BEDC01B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05E96B1F1A68634900204102;
+			remoteInfo = gtest;
+		};
+		053BEDC21B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05818F901A685AEA0072A469;
+			remoteInfo = GoogleMockTests;
+		};
+		053BEDC51B8EFDF9007D82A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05818F851A685AEA0072A469;
+			remoteInfo = GoogleMock;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		053BEDA31B8EFCB6007D82A4 /* Object-IMPL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Object-IMPL.h"; sourceTree = "<group>"; };
 		053BEDA41B8EFCB6007D82A4 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "XS-PIMPL-Object.cpp"; sourceTree = "<group>"; };
+		053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIMPL-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
+		053BEDC71B8EFE1E007D82A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		053BEDA91B8EFDC1007D82A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		053BED9F1B8EFCB6007D82A4 /* PIMPL */ = {
@@ -49,14 +106,27 @@
 		053BEDA51B8EFCB6007D82A4 /* Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
+				053BEDC71B8EFE1E007D82A4 /* Info.plist */,
 				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
 			);
 			path = "Unit-Tests";
 			sourceTree = "<group>";
 		};
+		053BEDB61B8EFDE6007D82A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */,
+				053BEDBF1B8EFDE6007D82A4 /* gmock.framework */,
+				053BEDC11B8EFDE6007D82A4 /* gtest.framework */,
+				053BEDC31B8EFDE6007D82A4 /* GoogleMockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		05BD89491A13FF4700A43CD8 = {
 			isa = PBXGroup;
 			children = (
+				053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */,
 				053BED9F1B8EFCB6007D82A4 /* PIMPL */,
 				053BEDA51B8EFCB6007D82A4 /* Unit-Tests */,
 				05BD89531A13FF4700A43CD8 /* Products */,
@@ -66,11 +136,33 @@
 		05BD89531A13FF4700A43CD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		053BEDAB1B8EFDC1007D82A4 /* PIMPL-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053BEDB11B8EFDC1007D82A4 /* Build configuration list for PBXNativeTarget "PIMPL-Tests" */;
+			buildPhases = (
+				053BEDA81B8EFDC1007D82A4 /* Sources */,
+				053BEDA91B8EFDC1007D82A4 /* Frameworks */,
+				053BEDAA1B8EFDC1007D82A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				053BEDC61B8EFDF9007D82A4 /* PBXTargetDependency */,
+			);
+			name = "PIMPL-Tests";
+			productName = "PIMPL-Tests";
+			productReference = 053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		05BD894A1A13FF4700A43CD8 /* Project object */ = {
@@ -78,6 +170,11 @@
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "XS-Labs";
+				TargetAttributes = {
+					053BEDAB1B8EFDC1007D82A4 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
 			};
 			buildConfigurationList = 05BD894D1A13FF4700A43CD8 /* Build configuration list for PBXProject "PIMPL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -89,13 +186,108 @@
 			mainGroup = 05BD89491A13FF4700A43CD8;
 			productRefGroup = 05BD89531A13FF4700A43CD8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 053BEDB61B8EFDE6007D82A4 /* Products */;
+					ProjectRef = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
+				053BEDAB1B8EFDC1007D82A4 /* PIMPL-Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleMock.framework;
+			remoteRef = 053BEDBC1B8EFDE6007D82A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		053BEDBF1B8EFDE6007D82A4 /* gmock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = gmock.framework;
+			remoteRef = 053BEDBE1B8EFDE6007D82A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		053BEDC11B8EFDE6007D82A4 /* gtest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = gtest.framework;
+			remoteRef = 053BEDC01B8EFDE6007D82A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		053BEDC31B8EFDE6007D82A4 /* GoogleMockTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GoogleMockTests.xctest;
+			remoteRef = 053BEDC21B8EFDE6007D82A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		053BEDAA1B8EFDC1007D82A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		053BEDA81B8EFDC1007D82A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		053BEDC61B8EFDF9007D82A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMock;
+			targetProxy = 053BEDC51B8EFDF9007D82A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		053BEDB21B8EFDC1007D82A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = PIMPL/include/;
+				INFOPLIST_FILE = "Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.PIMPL-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		053BEDB31B8EFDC1007D82A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = PIMPL/include/;
+				INFOPLIST_FILE = "Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.PIMPL-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		05BD89571A13FF4700A43CD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -150,9 +342,9 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -254,7 +446,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -299,6 +491,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		053BEDB11B8EFDC1007D82A4 /* Build configuration list for PBXNativeTarget "PIMPL-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053BEDB21B8EFDC1007D82A4 /* Debug */,
+				053BEDB31B8EFDC1007D82A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		05BD894D1A13FF4700A43CD8 /* Build configuration list for PBXProject "PIMPL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

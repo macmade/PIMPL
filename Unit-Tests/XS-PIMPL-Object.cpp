@@ -32,7 +32,7 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
-#include <XS-C++.h>
+#include <XS/PIMPL/Object.h>
 #include <GoogleMock/GoogleMock.h>
 
 /*******************************************************************************
@@ -69,7 +69,7 @@ class Derived: public Base, public XS::PIMPL::Object< Derived >
         void SetZ( int z );
 };
 
-#include <XS-C++/PIMPL/Object-IMPL.h>
+#include <XS/PIMPL/Object-IMPL.h>
 
 /*******************************************************************************
  * Test base class definition
