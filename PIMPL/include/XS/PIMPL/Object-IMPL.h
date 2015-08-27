@@ -36,7 +36,7 @@
  * of the IMPL class.
  */
 
-#include <XS-C++.h>
+#include <XS/PIMPL/Object.h>
 
 namespace XS
 {
