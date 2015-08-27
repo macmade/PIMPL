@@ -6,12 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		05B5BADA1A2112F500F86205 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05BD89651A141E0300A43CD8 /* Bar.cpp */; };
-		05B5BADB1A2112F500F86205 /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05BD895F1A14019A00A43CD8 /* Foo.cpp */; };
-		05BD89561A13FF4700A43CD8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05BD89551A13FF4700A43CD8 /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		05BD89501A13FF4700A43CD8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -26,13 +20,6 @@
 
 /* Begin PBXFileReference section */
 		05BD89521A13FF4700A43CD8 /* PIMPL Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PIMPL Example"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05BD89551A13FF4700A43CD8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		05BD895D1A13FF9900A43CD8 /* pimpl-public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pimpl-public.h"; sourceTree = "<group>"; };
-		05BD895E1A13FFA600A43CD8 /* pimpl-private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pimpl-private.h"; sourceTree = "<group>"; };
-		05BD895F1A14019A00A43CD8 /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
-		05BD89601A14019A00A43CD8 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
-		05BD89651A141E0300A43CD8 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
-		05BD89661A141E0300A43CD8 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +36,6 @@
 		05BD89491A13FF4700A43CD8 = {
 			isa = PBXGroup;
 			children = (
-				05BD895C1A13FF8000A43CD8 /* PIMPL */,
-				05BD89541A13FF4700A43CD8 /* PIMPL Example */,
 				05BD89531A13FF4700A43CD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,27 +46,6 @@
 				05BD89521A13FF4700A43CD8 /* PIMPL Example */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		05BD89541A13FF4700A43CD8 /* PIMPL Example */ = {
-			isa = PBXGroup;
-			children = (
-				05BD89551A13FF4700A43CD8 /* main.cpp */,
-				05BD89651A141E0300A43CD8 /* Bar.cpp */,
-				05BD89661A141E0300A43CD8 /* Bar.h */,
-				05BD895F1A14019A00A43CD8 /* Foo.cpp */,
-				05BD89601A14019A00A43CD8 /* Foo.h */,
-			);
-			path = "PIMPL Example";
-			sourceTree = "<group>";
-		};
-		05BD895C1A13FF8000A43CD8 /* PIMPL */ = {
-			isa = PBXGroup;
-			children = (
-				05BD895D1A13FF9900A43CD8 /* pimpl-public.h */,
-				05BD895E1A13FFA600A43CD8 /* pimpl-private.h */,
-			);
-			path = PIMPL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +104,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B5BADB1A2112F500F86205 /* Foo.cpp in Sources */,
-				05BD89561A13FF4700A43CD8 /* main.cpp in Sources */,
-				05B5BADA1A2112F500F86205 /* Bar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
