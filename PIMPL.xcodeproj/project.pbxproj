@@ -6,36 +6,59 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXCopyFilesBuildPhase section */
-		05BD89501A13FF4700A43CD8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		05BD89521A13FF4700A43CD8 /* PIMPL Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PIMPL Example"; sourceTree = BUILT_PRODUCTS_DIR; };
+		053BEDA31B8EFCB6007D82A4 /* Object-IMPL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Object-IMPL.h"; sourceTree = "<group>"; };
+		053BEDA41B8EFCB6007D82A4 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "XS-PIMPL-Object.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		05BD894F1A13FF4700A43CD8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
+		053BED9F1B8EFCB6007D82A4 /* PIMPL */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDA01B8EFCB6007D82A4 /* include */,
+			);
+			path = PIMPL;
+			sourceTree = "<group>";
+		};
+		053BEDA01B8EFCB6007D82A4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDA11B8EFCB6007D82A4 /* XS */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		053BEDA11B8EFCB6007D82A4 /* XS */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDA21B8EFCB6007D82A4 /* PIMPL */,
+			);
+			path = XS;
+			sourceTree = "<group>";
+		};
+		053BEDA21B8EFCB6007D82A4 /* PIMPL */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDA31B8EFCB6007D82A4 /* Object-IMPL.h */,
+				053BEDA41B8EFCB6007D82A4 /* Object.h */,
+			);
+			path = PIMPL;
+			sourceTree = "<group>";
+		};
+		053BEDA51B8EFCB6007D82A4 /* Unit-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
+			);
+			path = "Unit-Tests";
+			sourceTree = "<group>";
+		};
 		05BD89491A13FF4700A43CD8 = {
 			isa = PBXGroup;
 			children = (
+				053BED9F1B8EFCB6007D82A4 /* PIMPL */,
+				053BEDA51B8EFCB6007D82A4 /* Unit-Tests */,
 				05BD89531A13FF4700A43CD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,32 +66,11 @@
 		05BD89531A13FF4700A43CD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05BD89521A13FF4700A43CD8 /* PIMPL Example */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		05BD89511A13FF4700A43CD8 /* PIMPL Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 05BD89591A13FF4700A43CD8 /* Build configuration list for PBXNativeTarget "PIMPL Example" */;
-			buildPhases = (
-				05BD894E1A13FF4700A43CD8 /* Sources */,
-				05BD894F1A13FF4700A43CD8 /* Frameworks */,
-				05BD89501A13FF4700A43CD8 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PIMPL Example";
-			productName = "PIMPL Example";
-			productReference = 05BD89521A13FF4700A43CD8 /* PIMPL Example */;
-			productType = "com.apple.product-type.tool";
-		};
-/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		05BD894A1A13FF4700A43CD8 /* Project object */ = {
@@ -76,11 +78,6 @@
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "XS-Labs";
-				TargetAttributes = {
-					05BD89511A13FF4700A43CD8 = {
-						CreatedOnToolsVersion = 6.1;
-					};
-				};
 			};
 			buildConfigurationList = 05BD894D1A13FF4700A43CD8 /* Build configuration list for PBXProject "PIMPL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -94,20 +91,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05BD89511A13FF4700A43CD8 /* PIMPL Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		05BD894E1A13FF4700A43CD8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		05BD89571A13FF4700A43CD8 /* Debug */ = {
@@ -310,20 +296,6 @@
 			};
 			name = Release;
 		};
-		05BD895A1A13FF4700A43CD8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		05BD895B1A13FF4700A43CD8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,15 +304,6 @@
 			buildConfigurations = (
 				05BD89571A13FF4700A43CD8 /* Debug */,
 				05BD89581A13FF4700A43CD8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		05BD89591A13FF4700A43CD8 /* Build configuration list for PBXNativeTarget "PIMPL Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				05BD895A1A13FF4700A43CD8 /* Debug */,
-				05BD895B1A13FF4700A43CD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
