@@ -498,6 +498,7 @@
 				053BEDB31B8EFDC1007D82A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05BD894D1A13FF4700A43CD8 /* Build configuration list for PBXProject "PIMPL" */ = {
 			isa = XCConfigurationList;
