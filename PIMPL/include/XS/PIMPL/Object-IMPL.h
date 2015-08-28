@@ -48,11 +48,11 @@ namespace XS
         {}
         
         template< class T >
-        Object< T >::Object( const Object & o ): impl( new Object< T >::IMPL( *( o.impl ) ) )
+        Object< T >::Object( const Object< T > & o ): impl( new Object< T >::IMPL( *( o.impl ) ) )
         {}
         
         template< class T >
-        Object< T >::Object( Object && o )
+        Object< T >::Object( Object< T > && o )
         {
             this->impl = std::move( o.impl );
             o.impl     = nullptr;
@@ -60,12 +60,20 @@ namespace XS
         
         template< class T >
         Object< T >::~Object( void )
-        {}
+        {
+            delete this->impl;
+        }
         
         template< class T >
-        Object< T > & Object< T >::operator =( Object o )
+        Object< T > & Object< T >::operator =( Object< T > o )
         {
+            /*
+             * False-positive potential memory leak detected by recent versions
+             * of Clang static analyzer.
+             */
+            #ifndef __clang_analyzer__
             swap( *( this ), o );
+            #endif
             
             return *( this );
         }

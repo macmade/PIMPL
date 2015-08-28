@@ -35,8 +35,6 @@
 #ifndef XS_PIMPL_OBJECT_H
 #define XS_PIMPL_OBJECT_H
 
-#include <memory>
-
 namespace XS
 {
     namespace PIMPL
@@ -60,13 +58,13 @@ namespace XS
                  * @brief       Class copy constructor
                  * @param       o   Another object to be used as data source for the initialization
                  */
-                Object( const Object & o );
+                Object( const Object< T > & o );
                 
                 /*!
                  * @brief       Class move constructor
                  * @param       o   Another object to be used as data source for the initialization
                  */
-                Object( Object && o );
+                Object( Object< T > && o );
                 
                 /*!
                  * @brief       Class destructor
@@ -77,7 +75,7 @@ namespace XS
                  * @brief       Assignment operator
                  * @param       o   Another object to use as data source
                  */
-                Object< T > & operator =( Object o );
+                Object< T > & operator =( Object< T > o );
                 
                 /*!
                  * @brief           ADL - Swap function for XS::PIMPL::Object
@@ -94,27 +92,9 @@ namespace XS
                 class  IMPL;
                 
                 /*!
-                 * @brief           Deleter class for the private implementation
-                 */
-                class D
-                {
-                    public:
-                        
-                        /*!
-                         * @brief       Function call operator
-                         * @param       p   The private implementation pointer that needs to be deleted
-                         * 
-                         * This method shall be defined manually for all classes
-                         * extending XS::PIMPL::Object, as there is no way to
-                         * delete a pointer to a forward class.
-                         */
-                        void operator ()( IMPL * p );
-                };
-                
-                /*!
                  * @brief       A pointer to the class' private implementation
                  */
-                std::unique_ptr< IMPL, D > impl;
+                 IMPL * impl;
         };
     }
 }

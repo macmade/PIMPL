@@ -93,12 +93,6 @@ class XS::PIMPL::Object< Base >::IMPL
         int _y;
 };
 
-template<>
-void XS::PIMPL::Object< Base >::D::operator ()( XS::PIMPL::Object< Base >::IMPL * p )
-{
-    delete p;
-}
-
 template class XS::PIMPL::Object< Base >;
 
 Base::Base( void ): XS::PIMPL::Object< Base >( 0, 0 )
@@ -147,12 +141,6 @@ class XS::PIMPL::Object< Derived >::IMPL
         
         int _z;
 };
-
-template<>
-void XS::PIMPL::Object< Derived >::D::operator ()( XS::PIMPL::Object< Derived >::IMPL * p )
-{
-    delete p;
-}
 
 template class XS::PIMPL::Object< Derived >;
 
