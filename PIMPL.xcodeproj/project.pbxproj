@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */; settings = {ASSET_TAGS = (); }; };
 		053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */; };
+		053BEDEC1B90ABB2007D82A4 /* travis-after.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE71B90ABB2007D82A4 /* travis-after.sh */; settings = {ASSET_TAGS = (); }; };
+		053BEDED1B90ABB2007D82A4 /* travis-before.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE81B90ABB2007D82A4 /* travis-before.sh */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIMPL-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		053BEDC71B8EFE1E007D82A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		053BEDE71B90ABB2007D82A4 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
+		053BEDE81B90ABB2007D82A4 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +127,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		053BEDE51B90ABB2007D82A4 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				053BEDE71B90ABB2007D82A4 /* travis-after.sh */,
+				053BEDE81B90ABB2007D82A4 /* travis-before.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		05BD89491A13FF4700A43CD8 = {
 			isa = PBXGroup;
 			children = (
 				053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */,
 				053BED9F1B8EFCB6007D82A4 /* PIMPL */,
 				053BEDA51B8EFCB6007D82A4 /* Unit-Tests */,
+				053BEDE51B90ABB2007D82A4 /* Scripts */,
 				05BD89531A13FF4700A43CD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 				053BEDA81B8EFDC1007D82A4 /* Sources */,
 				053BEDA91B8EFDC1007D82A4 /* Frameworks */,
 				053BEDAA1B8EFDC1007D82A4 /* Resources */,
+				053BEDF51B90AC06007D82A4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,10 +250,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053BEDEC1B90ABB2007D82A4 /* travis-after.sh in Resources */,
+				053BEDED1B90ABB2007D82A4 /* travis-before.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		053BEDF51B90AC06007D82A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-tests.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		053BEDA81B8EFDC1007D82A4 /* Sources */ = {

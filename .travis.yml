@@ -1,3 +1,7 @@
 language: objective-c
 xcode_project: PIMPL.xcodeproj
-xcode_scheme: PIMPL Example
+xcode_scheme: PIMPL-Tests
+before_install:
+- bash Scripts/travis-before.sh
+after_success:
+- bash Scripts/travis-after.sh
