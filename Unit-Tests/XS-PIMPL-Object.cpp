@@ -33,7 +33,12 @@
  */
 
 #include <XS/PIMPL/Object.h>
-#include <GoogleMock/GoogleMock.h>
+#include "../Submodules/SeriousCode/clang-warnings.h"
+
+/* Disabled warinngs for GoogleMock */
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+#endif
 
 /*******************************************************************************
  * Test base class declaration

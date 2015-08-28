@@ -29,63 +29,12 @@
 
 /*!
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com
- * @brief       Private delcarations of the XS::PIMPL::Object template class
- * 
- * This header shall be included in implementations of PIMPL classes.
- * Note that explicit template instanciation is required after the declaration
- * of the IMPL class.
+ * @brief       Precompiled header for unit tests
  */
 
-#include <XS/PIMPL/Object.h>
+#ifndef PIMPL_TESTS_PREFIX_H
+#define PIMPL_TESTS_PREFIX_H
 
-namespace XS
-{
-    namespace PIMPL
-    {
-        template< class T >
-        template< typename ... A >
-        Object< T >::Object( A ... args ): impl( new Object< T >::IMPL( args ... ) )
-        {}
-        
-        template< class T >
-        Object< T >::Object( const Object< T > & o ): impl( new Object< T >::IMPL( *( o.impl ) ) )
-        {}
-        
-        template< class T >
-        Object< T >::Object( Object< T > && o )
-        {
-            this->impl = std::move( o.impl );
-            o.impl     = nullptr;
-        }
-        
-        template< class T >
-        Object< T >::~Object( void )
-        {
-            delete this->impl;
-        }
-        
-        template< class T >
-        Object< T > & Object< T >::operator =( Object< T > o )
-        {
-            /*
-             * False-positive potential memory leak detected by recent versions
-             * of Clang static analyzer.
-             */
-            #ifndef __clang_analyzer__
-            swap( *( this ), o );
-            #else
-            ( void )o;
-            #endif
-            
-            return *( this );
-        }
-        
-        template< class U >
-        void swap( Object< U > & o1, Object< U > & o2 )
-        {
-            using std::swap;
-            
-            swap( o1.impl, o2.impl );
-        }
-    }
-}
+#include <GoogleMock/GoogleMock.h>
+
+#endif /* PIMPL_TESTS_PREFIX_H */
