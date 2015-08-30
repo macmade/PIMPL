@@ -36,7 +36,9 @@
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wglobal-constructors"
 #pragma clang diagnostic push
+#if __clang_major__ >= 7
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
+#endif
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 #pragma clang diagnostic ignored "-Wpadded"
 #pragma clang diagnostic ignored "-Wused-but-marked-unused"
