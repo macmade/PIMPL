@@ -45,6 +45,10 @@ namespace XS
     namespace PIMPL
     {
         template< class T >
+        Object< T >::Object( void ): impl( new Object< T >::IMPL )
+        {}
+        
+        template< class T >
         template< typename ... A >
         Object< T >::Object( A ... args ): impl( new Object< T >::IMPL( args ... ) )
         {}

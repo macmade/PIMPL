@@ -49,7 +49,12 @@ namespace XS
             public:
                 
                 /*!
-                 * @brief       Class constructor
+                 * @brief       Class constructor (no parameters)
+                 */
+                Object( void );
+                
+                /*!
+                 * @brief       Class constructor (with parameters)
                  */
                 template< typename ... A > 
                 Object( A ... args );
