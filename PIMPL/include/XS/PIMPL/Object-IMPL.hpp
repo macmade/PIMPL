@@ -84,7 +84,11 @@ namespace XS
             #ifndef __clang_analyzer__
             swap( *( this ), o );
             #else
-            ( void )o;
+            {
+                auto tmp   = std::move( o.impl );
+                o.impl     = std::move( this->impl );
+                this->impl = std::move( tmp );
+            }
             #endif
             
             return *( this );
