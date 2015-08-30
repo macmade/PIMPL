@@ -37,6 +37,8 @@
  */
 
 #include <XS/PIMPL/Object.hpp>
+#include <memory>
+#include <algorithm>
 
 namespace XS
 {
