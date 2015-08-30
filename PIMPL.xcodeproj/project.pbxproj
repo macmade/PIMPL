@@ -52,8 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053BEDA31B8EFCB6007D82A4 /* Object-IMPL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Object-IMPL.h"; sourceTree = "<group>"; };
-		053BEDA41B8EFCB6007D82A4 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		053BEDA31B8EFCB6007D82A4 /* Object-IMPL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "Object-IMPL.hpp"; sourceTree = "<group>"; };
+		053BEDA41B8EFCB6007D82A4 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "XS-PIMPL-Object.cpp"; sourceTree = "<group>"; };
 		053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIMPL-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		053BEDA21B8EFCB6007D82A4 /* PIMPL */ = {
 			isa = PBXGroup;
 			children = (
-				053BEDA31B8EFCB6007D82A4 /* Object-IMPL.h */,
-				053BEDA41B8EFCB6007D82A4 /* Object.h */,
+				053BEDA31B8EFCB6007D82A4 /* Object-IMPL.hpp */,
+				053BEDA41B8EFCB6007D82A4 /* Object.hpp */,
 			);
 			path = PIMPL;
 			sourceTree = "<group>";
