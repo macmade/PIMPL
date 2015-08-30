@@ -173,3 +173,59 @@ TEST( XS_PIMPL_Object, BarClassAssigmnetOperator )
     ASSERT_EQ( 2, b2.GetY() );
     ASSERT_EQ( 3, b2.GetZ() );
 }
+
+TEST( XS_PIMPL_Object, FoobarClassGetter )
+{
+    Foobar f;
+    
+    ASSERT_EQ( 0, f.GetX() );
+    ASSERT_EQ( 0, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FoobarClassSetter )
+{
+    Foobar f;
+    
+    f.SetX( 1 );
+    f.SetY( 2 );
+    
+    ASSERT_EQ( 1, f.GetX() );
+    ASSERT_EQ( 2, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FoobarClassConstructorWithParams )
+{
+    Foobar f( 1, 2 );
+    
+    ASSERT_EQ( 1, f.GetX() );
+    ASSERT_EQ( 2, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FoobarClassCopyConstructor )
+{
+    Foobar f1( 1, 2 );
+    Foobar f2( f1 );
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FoobarClassMoveConstructor )
+{
+    Foobar f1( 1, 2 );
+    Foobar f2 = std::move( f1 );
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FoobarClassAssigmnentOperator )
+{
+    Foobar f1( 1, 2 );
+    Foobar f2;
+    
+    f2 = f1;
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}

@@ -29,9 +29,59 @@
 
 /*!
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com
- * @brief       Test class Foo
+ * @brief       Test class Foobar
  */
 
 #include "Foobar.hpp"
+#include "Foo.hpp"
 
+template<>
+class XS::PIMPL::Object< Foobar >::IMPL
+{
+    public:
+        
+        IMPL( void )
+        {}
+        
+        IMPL( int x, int y ): _foo( x, y )
+        {}
+        
+        IMPL( const IMPL & o ): _foo( o._foo )
+        {}
+        
+        ~IMPL( void )
+        {}
+        
+        Foo _foo;
+};
 
+#define XS_PIMPL_CLASS Foobar
+#include <XS/PIMPL/Object-IMPL.hpp>
+
+template class XS::PIMPL::Object< Foobar >;
+
+Foobar::Foobar( void ): XS::PIMPL::Object< Foobar >()
+{}
+
+Foobar::Foobar( int x, int y ): XS::PIMPL::Object< Foobar >( x, y )
+{}
+
+int Foobar::GetX( void )
+{
+    return this->impl->_foo.GetX();
+}
+
+int Foobar::GetY( void )
+{
+    return this->impl->_foo.GetY();
+}
+
+void Foobar::SetX( int x )
+{
+    this->impl->_foo.SetX( x );
+}
+
+void Foobar::SetY( int y )
+{
+    this->impl->_foo.SetY( y );
+}

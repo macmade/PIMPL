@@ -35,6 +35,20 @@
 #ifndef FOOBAR_H
 #define FOOBAR_H
 
+#include <XS/PIMPL/Object.hpp>
 
+class Foobar: XS::PIMPL::Object< Foobar >
+{
+    public:
+        
+        using XS::PIMPL::Object< Foobar >::impl;
+        
+        Foobar( void );
+        Foobar( int x, int y );
+        int GetX( void );
+        int GetY( void );
+        void SetX( int x );
+        void SetY( int y );
+};
 
 #endif /* FOOBAR_H */
