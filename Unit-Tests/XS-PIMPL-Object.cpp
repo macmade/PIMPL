@@ -32,260 +32,130 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
-#include <XS/PIMPL/Object.h>
-#include "../Submodules/SeriousCode/clang-warnings.h"
-
 /* Disabled warinngs for GoogleMock */
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 
-/*******************************************************************************
- * Test base class declaration
- ******************************************************************************/
-
-class Base: XS::PIMPL::Object< Base >
-{
-    public:
-        
-        using XS::PIMPL::Object< Base >::impl;
-        
-        Base( void );
-        Base( int x, int y );
-        int GetX( void );
-        int GetY( void );
-        void SetX( int x );
-        void SetY( int y );
-};
-
-/*******************************************************************************
- * Test derived class declaration
- ******************************************************************************/
-
-class Derived: public Base, public XS::PIMPL::Object< Derived >
-{
-    public:
-        
-        using XS::PIMPL::Object< Derived >::impl;
-        
-        Derived( void );
-        Derived( int x, int y, int z );
-        int GetZ( void );
-        void SetZ( int z );
-};
-
-#include <XS/PIMPL/Object-IMPL.h>
-
-/*******************************************************************************
- * Test base class definition
- ******************************************************************************/
-
-template<>
-class XS::PIMPL::Object< Base >::IMPL
-{
-    public:
-        
-        IMPL( int x, int y ): _x( x ), _y( y )
-        {}
-        
-        IMPL( const IMPL & o ): _x( o._x ), _y( o._y )
-        {}
-        
-        ~IMPL( void )
-        {}
-        
-        int _x;
-        int _y;
-};
-
-template class XS::PIMPL::Object< Base >;
-
-Base::Base( void ): XS::PIMPL::Object< Base >( 0, 0 )
-{}
-
-Base::Base( int x, int y ): XS::PIMPL::Object< Base >( x, y )
-{}
-
-int Base::GetX( void )
-{
-    return this->impl->_x;
-}
-
-int Base::GetY( void )
-{
-    return this->impl->_y;
-}
-
-void Base::SetX( int x )
-{
-    this->impl->_x = x;
-}
-
-void Base::SetY( int y )
-{
-    this->impl->_y = y;
-}
-
-/*******************************************************************************
- * Test derived class definition
- ******************************************************************************/
-
-template<>
-class XS::PIMPL::Object< Derived >::IMPL
-{
-    public:
-        
-        IMPL( int z ): _z( z )
-        {}
-        
-        IMPL( const IMPL & o ): _z( o._z )
-        {}
-        
-        ~IMPL( void )
-        {}
-        
-        int _z;
-};
-
-template class XS::PIMPL::Object< Derived >;
-
-Derived::Derived( void ): Base( 0, 0 ), XS::PIMPL::Object< Derived >( 0 )
-{}
-
-Derived::Derived( int x, int y, int z ): Base( x, y ), XS::PIMPL::Object< Derived >( z )
-{}
-
-int Derived::GetZ( void )
-{
-    return this->impl->_z;
-}
-
-void Derived::SetZ( int z )
-{
-    this->impl->_z = z;
-}
-
-/*******************************************************************************
- * Unit tests
- ******************************************************************************/
+#include <GoogleMock/GoogleMock.h>
 
 using namespace testing;
 
-TEST( XS_PIMPL_Object, BaseClassGetter )
+TEST( XS_PIMPL_Object, FooClassGetter )
 {
-    Base b;
+    Foo f;
+    
+    ASSERT_EQ( 0, f.GetX() );
+    ASSERT_EQ( 0, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FooClassSetter )
+{
+    Foo f;
+    
+    f.SetX( 1 );
+    f.SetY( 2 );
+    
+    ASSERT_EQ( 1, f.GetX() );
+    ASSERT_EQ( 2, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FooClassConstructorWithParams )
+{
+    Foo f( 1, 2 );
+    
+    ASSERT_EQ( 1, f.GetX() );
+    ASSERT_EQ( 2, f.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FooClassCopyConstructor )
+{
+    Foo f1( 1, 2 );
+    Foo f2( f1 );
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FooClassMoveConstructor )
+{
+    Foo f1( 1, 2 );
+    Foo f2 = std::move( f1 );
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}
+
+TEST( XS_PIMPL_Object, FooClassAssigmnentOperator )
+{
+    Foo f1( 1, 2 );
+    Foo f2;
+    
+    f2 = f1;
+    
+    ASSERT_EQ( 1, f2.GetX() );
+    ASSERT_EQ( 2, f2.GetY() );
+}
+
+TEST( XS_PIMPL_Object, BarClassGetter )
+{
+    Bar b;
     
     ASSERT_EQ( 0, b.GetX() );
     ASSERT_EQ( 0, b.GetY() );
+    ASSERT_EQ( 0, b.GetZ() );
 }
 
-TEST( XS_PIMPL_Object, BaseClassSetter )
+TEST( XS_PIMPL_Object, BarClassSetter )
 {
-    Base b;
+    Bar b;
     
     b.SetX( 1 );
     b.SetY( 2 );
+    b.SetZ( 3 );
     
     ASSERT_EQ( 1, b.GetX() );
     ASSERT_EQ( 2, b.GetY() );
+    ASSERT_EQ( 3, b.GetZ() );
 }
 
-TEST( XS_PIMPL_Object, BaseClassConstructorWithParams )
+TEST( XS_PIMPL_Object, BarClassConstructorWithParams )
 {
-    Base b( 1, 2 );
+    Bar b( 1, 2, 3 );
     
     ASSERT_EQ( 1, b.GetX() );
     ASSERT_EQ( 2, b.GetY() );
+    ASSERT_EQ( 3, b.GetZ() );
 }
 
-TEST( XS_PIMPL_Object, BaseClassCopyConstructor )
+TEST( XS_PIMPL_Object, BarClassCopyConstructor )
 {
-    Base b1( 1, 2 );
-    Base b2( b1 );
+    Bar b1( 1, 2, 3 );
+    Bar b2( d1 );
     
     ASSERT_EQ( 1, b2.GetX() );
     ASSERT_EQ( 2, b2.GetY() );
+    ASSERT_EQ( 3, b2.GetZ() );
 }
 
-TEST( XS_PIMPL_Object, BaseClassMoveConstructor )
+TEST( XS_PIMPL_Object, BarClassMoveConstructor )
 {
-    Base b1( 1, 2 );
-    Base b2 = std::move( b1 );
+    Bar b1( 1, 2, 3 );
+    Bar b2 = std::move( b1 );
     
     ASSERT_EQ( 1, b2.GetX() );
     ASSERT_EQ( 2, b2.GetY() );
+    ASSERT_EQ( 3, b2.GetZ() );
 }
 
-TEST( XS_PIMPL_Object, BaseClassAssigmnentOperator )
+TEST( XS_PIMPL_Object, BarClassAssigmnetOperator )
 {
-    Base b1( 1, 2 );
-    Base b2;
+    Bar b1( 1, 2, 3 );
+    Bar b2;
     
     b2 = b1;
     
     ASSERT_EQ( 1, b2.GetX() );
     ASSERT_EQ( 2, b2.GetY() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassGetter )
-{
-    Derived d;
-    
-    ASSERT_EQ( 0, d.GetX() );
-    ASSERT_EQ( 0, d.GetY() );
-    ASSERT_EQ( 0, d.GetZ() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassSetter )
-{
-    Derived d;
-    
-    d.SetX( 1 );
-    d.SetY( 2 );
-    d.SetZ( 3 );
-    
-    ASSERT_EQ( 1, d.GetX() );
-    ASSERT_EQ( 2, d.GetY() );
-    ASSERT_EQ( 3, d.GetZ() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassConstructorWithParams )
-{
-    Derived d( 1, 2, 3 );
-    
-    ASSERT_EQ( 1, d.GetX() );
-    ASSERT_EQ( 2, d.GetY() );
-    ASSERT_EQ( 3, d.GetZ() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassCopyConstructor )
-{
-    Derived d1( 1, 2, 3 );
-    Derived d2( d1 );
-    
-    ASSERT_EQ( 1, d2.GetX() );
-    ASSERT_EQ( 2, d2.GetY() );
-    ASSERT_EQ( 3, d2.GetZ() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassMoveConstructor )
-{
-    Derived d1( 1, 2, 3 );
-    Derived d2 = std::move( d1 );
-    
-    ASSERT_EQ( 1, d2.GetX() );
-    ASSERT_EQ( 2, d2.GetY() );
-    ASSERT_EQ( 3, d2.GetZ() );
-}
-
-TEST( XS_PIMPL_Object, DerivedClassAssigmnetOperator )
-{
-    Derived d1( 1, 2, 3 );
-    Derived d2;
-    
-    d2 = d1;
-    
-    ASSERT_EQ( 1, d2.GetX() );
-    ASSERT_EQ( 2, d2.GetY() );
-    ASSERT_EQ( 3, d2.GetZ() );
+    ASSERT_EQ( 3, b2.GetZ() );
 }

@@ -11,6 +11,9 @@
 		053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */; };
 		053BEDEC1B90ABB2007D82A4 /* travis-after.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE71B90ABB2007D82A4 /* travis-after.sh */; settings = {ASSET_TAGS = (); }; };
 		053BEDED1B90ABB2007D82A4 /* travis-before.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE81B90ABB2007D82A4 /* travis-before.sh */; settings = {ASSET_TAGS = (); }; };
+		053BEE241B935C8D007D82A4 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE221B935C8D007D82A4 /* Bar.cpp */; settings = {ASSET_TAGS = (); }; };
+		053BEE271B935C98007D82A4 /* Foobar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE251B935C98007D82A4 /* Foobar.cpp */; settings = {ASSET_TAGS = (); }; };
+		053BEE2A1B935CC4007D82A4 /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE281B935CC4007D82A4 /* Foo.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		053BEDE71B90ABB2007D82A4 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
 		053BEDE81B90ABB2007D82A4 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		053BEDF91B90B37E007D82A4 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		053BEE221B935C8D007D82A4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
+		053BEE231B935C8D007D82A4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
+		053BEE251B935C98007D82A4 /* Foobar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foobar.cpp; sourceTree = "<group>"; };
+		053BEE261B935C98007D82A4 /* Foobar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foobar.hpp; sourceTree = "<group>"; };
+		053BEE281B935CC4007D82A4 /* Foo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
+		053BEE291B935CC4007D82A4 /* Foo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +120,15 @@
 		053BEDA51B8EFCB6007D82A4 /* Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
+				053BEE221B935C8D007D82A4 /* Bar.cpp */,
+				053BEE231B935C8D007D82A4 /* Bar.hpp */,
+				053BEE281B935CC4007D82A4 /* Foo.cpp */,
+				053BEE291B935CC4007D82A4 /* Foo.hpp */,
+				053BEE251B935C98007D82A4 /* Foobar.cpp */,
+				053BEE261B935C98007D82A4 /* Foobar.hpp */,
 				053BEDC71B8EFE1E007D82A4 /* Info.plist */,
-				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
 				053BEDF91B90B37E007D82A4 /* Prefix.pch */,
+				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
 			);
 			path = "Unit-Tests";
 			sourceTree = "<group>";
@@ -280,6 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053BEE2A1B935CC4007D82A4 /* Foo.cpp in Sources */,
+				053BEE241B935C8D007D82A4 /* Bar.cpp in Sources */,
+				053BEE271B935C98007D82A4 /* Foobar.cpp in Sources */,
 				053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

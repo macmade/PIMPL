@@ -35,6 +35,6 @@
 #ifndef PIMPL_TESTS_PREFIX_H
 #define PIMPL_TESTS_PREFIX_H
 
-#include <GoogleMock/GoogleMock.h>
+#include "../Submodules/SeriousCode/clang-warnings.h"
 
 #endif /* PIMPL_TESTS_PREFIX_H */
