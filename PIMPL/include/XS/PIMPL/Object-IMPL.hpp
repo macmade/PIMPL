@@ -40,38 +40,42 @@
 #include <memory>
 #include <algorithm>
 
+#ifndef XS_PIMPL_CLASS
+#error "Please define XS_PIMPL_CLASS before including this header file"
+#endif
+
 namespace XS
 {
     namespace PIMPL
     {
-        template< class T >
-        Object< T >::Object( void ): impl( new Object< T >::IMPL )
+        template<>
+        Object< XS_PIMPL_CLASS >::Object( void ): impl( new Object< XS_PIMPL_CLASS >::IMPL )
         {}
         
-        template< class T >
+        template<>
         template< typename ... A >
-        Object< T >::Object( A ... args ): impl( new Object< T >::IMPL( args ... ) )
+        Object< XS_PIMPL_CLASS >::Object( A ... args ): impl( new Object< XS_PIMPL_CLASS >::IMPL( args ... ) )
         {}
         
-        template< class T >
-        Object< T >::Object( const Object< T > & o ): impl( new Object< T >::IMPL( *( o.impl ) ) )
+        template<>
+        Object< XS_PIMPL_CLASS >::Object( const Object< XS_PIMPL_CLASS > & o ): impl( new Object< XS_PIMPL_CLASS >::IMPL( *( o.impl ) ) )
         {}
         
-        template< class T >
-        Object< T >::Object( Object< T > && o )
+        template<>
+        Object< XS_PIMPL_CLASS >::Object( Object< XS_PIMPL_CLASS > && o )
         {
             this->impl = std::move( o.impl );
             o.impl     = nullptr;
         }
         
-        template< class T >
-        Object< T >::~Object( void )
+        template<>
+        Object< XS_PIMPL_CLASS >::~Object( void )
         {
             delete this->impl;
         }
         
-        template< class T >
-        Object< T > & Object< T >::operator =( Object< T > o )
+        template<>
+        Object< XS_PIMPL_CLASS > & Object< XS_PIMPL_CLASS >::operator =( Object< XS_PIMPL_CLASS > o )
         {
             /*
              * False-positive potential memory leak detected by recent versions
