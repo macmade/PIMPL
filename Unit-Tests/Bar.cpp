@@ -29,7 +29,7 @@
 
 /*!
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com
- * @brief       Test class Foo
+ * @brief       Test class Bar
  */
 
 #include "Bar.hpp"
