@@ -32,12 +32,26 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
-/* Disabled warinngs for GoogleMock */
+/* Disabled warnings for GoogleMock */
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+#pragma clang diagnostic ignored "-Wmissing-noreturn"
+#pragma clang diagnostic ignored "-Wpadded"
+#pragma clang diagnostic ignored "-Wused-but-marked-unused"
+#pragma clang diagnostic ignored "-Wdeprecated"
 #endif
 
 #include <GoogleMock/GoogleMock.h>
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+
+#include "Foo.hpp"
+#include "Bar.hpp"
+#include "Foobar.hpp"
 
 using namespace testing;
 
@@ -131,7 +145,7 @@ TEST( XS_PIMPL_Object, BarClassConstructorWithParams )
 TEST( XS_PIMPL_Object, BarClassCopyConstructor )
 {
     Bar b1( 1, 2, 3 );
-    Bar b2( d1 );
+    Bar b2( b1 );
     
     ASSERT_EQ( 1, b2.GetX() );
     ASSERT_EQ( 2, b2.GetY() );

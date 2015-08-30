@@ -33,12 +33,14 @@
  */
 
 #include "Foo.hpp"
-#include <XS/PIMPL/Object-IMPL.hpp>
 
 template<>
 class XS::PIMPL::Object< Foo >::IMPL
 {
     public:
+        
+        IMPL( void ): _x( 0 ), _y( 0 )
+        {}
         
         IMPL( int x, int y ): _x( x ), _y( y )
         {}
@@ -52,6 +54,9 @@ class XS::PIMPL::Object< Foo >::IMPL
         int _x;
         int _y;
 };
+
+#define XS_PIMPL_CLASS Foo
+#include <XS/PIMPL/Object-IMPL.hpp>
 
 template class XS::PIMPL::Object< Foo >;
 
