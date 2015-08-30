@@ -62,10 +62,9 @@ namespace XS
         {}
         
         template<>
-        Object< XS_PIMPL_CLASS >::Object( Object< XS_PIMPL_CLASS > && o )
+        Object< XS_PIMPL_CLASS >::Object( Object< XS_PIMPL_CLASS > && o ): impl( std::move( o.impl ) )
         {
-            this->impl = std::move( o.impl );
-            o.impl     = nullptr;
+            o.impl = nullptr;
         }
         
         template<>
@@ -77,19 +76,7 @@ namespace XS
         template<>
         Object< XS_PIMPL_CLASS > & Object< XS_PIMPL_CLASS >::operator =( Object< XS_PIMPL_CLASS > o )
         {
-            /*
-             * False-positive potential memory leak detected by recent versions
-             * of Clang static analyzer.
-             */
-            #ifndef __clang_analyzer__
             swap( *( this ), o );
-            #else
-            {
-                auto tmp   = std::move( o.impl );
-                o.impl     = std::move( this->impl );
-                this->impl = std::move( tmp );
-            }
-            #endif
             
             return *( this );
         }
