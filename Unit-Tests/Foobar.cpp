@@ -58,8 +58,6 @@ class XS::PIMPL::Object< Foobar >::IMPL
 #define XS_PIMPL_CLASS Foobar
 #include <XS/PIMPL/Object-IMPL.hpp>
 
-template class XS::PIMPL::Object< Foobar >;
-
 Foobar::Foobar( void ): XS::PIMPL::Object< Foobar >()
 {}
 

@@ -35,6 +35,16 @@
 #ifndef XS_PIMPL_OBJECT_H
 #define XS_PIMPL_OBJECT_H
 
+#ifdef _WIN32
+    #ifdef XS_PIMPL_EXPORTS
+        #define XS_PIMPL_API    __declspec( dllexport )
+    #else
+        #define XS_PIMPL_API    __declspec( dllimport )
+    #endif
+#else
+    #define     XS_PIMPL_API    
+#endif
+
 namespace XS
 {
     namespace PIMPL
@@ -44,7 +54,7 @@ namespace XS
          * @tparam          T   The class extending XS::PIMPL::Object
          */
         template< class T >
-        class Object
+        class XS_PIMPL_API Object
         {
             public:
                 

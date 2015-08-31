@@ -90,3 +90,6 @@ namespace XS
         }
     }
 }
+
+/* Explicit template instantiation */
+template class XS::PIMPL::Object< XS_PIMPL_CLASS >;

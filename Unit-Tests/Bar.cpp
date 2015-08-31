@@ -57,8 +57,6 @@ class XS::PIMPL::Object< Bar >::IMPL
 #define XS_PIMPL_CLASS Bar
 #include <XS/PIMPL/Object-IMPL.hpp>
 
-template class XS::PIMPL::Object< Bar >;
-
 Bar::Bar( void ): Foo( 0, 0 ), XS::PIMPL::Object< Bar >( 0 )
 {}
 

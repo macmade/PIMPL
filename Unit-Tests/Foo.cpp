@@ -58,8 +58,6 @@ class XS::PIMPL::Object< Foo >::IMPL
 #define XS_PIMPL_CLASS Foo
 #include <XS/PIMPL/Object-IMPL.hpp>
 
-template class XS::PIMPL::Object< Foo >;
-
 Foo::Foo( void ): XS::PIMPL::Object< Foo >( 0, 0 )
 {}
 
