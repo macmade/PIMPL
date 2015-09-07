@@ -66,8 +66,8 @@ namespace XS
                 /*!
                  * @brief       Class constructor (with parameters)
                  */
-                template< typename ... A > 
-                Object( A ... args );
+                template< typename A1, typename ... A2 > 
+                Object( A1 a1, A2 ... a2 );
                 
                 /*!
                  * @brief       Class copy constructor

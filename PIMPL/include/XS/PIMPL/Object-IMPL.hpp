@@ -53,8 +53,8 @@ namespace XS
         {}
         
         template<>
-        template< typename ... A >
-        Object< XS_PIMPL_CLASS >::Object( A ... args ): impl( new Object< XS_PIMPL_CLASS >::IMPL( args ... ) )
+        template< typename A1, typename ... A2 >
+        Object< XS_PIMPL_CLASS >::Object( A1 a1, A2 ... a2 ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a1, a2 ... ) )
         {}
         
         template<>
