@@ -93,3 +93,4 @@ namespace XS
 
 /* Explicit template instantiation */
 template class XS::PIMPL::Object< XS_PIMPL_CLASS >;
+template void XS::PIMPL::swap< XS_PIMPL_CLASS >( XS::PIMPL::Object< XS_PIMPL_CLASS > & o1, XS::PIMPL::Object< XS_PIMPL_CLASS > & o2 );

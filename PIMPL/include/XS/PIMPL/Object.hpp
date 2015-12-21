@@ -94,7 +94,6 @@ namespace XS
                 
                 /*!
                  * @brief           ADL - Swap function for XS::PIMPL::Object
-                 * @tparam          U   The class extending XS::PIMPL::Object
                  * @param           o1  The first object to swap
                  * @param           o2  The second object to swap
                  */
