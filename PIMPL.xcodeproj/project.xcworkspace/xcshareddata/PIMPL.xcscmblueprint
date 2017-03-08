@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5521C9A6-96AA-455E-BEE7-6714F09EF258",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "A59B79241FF48B87B8A2D6239F13C873F14163E3" : "PIMPL\/Submodules\/gmock-xcode\/",
-    "DC27B5DA8A3BAEC9EFF8F0DE9ED4ADFB1116243D" : "PIMPL"
+    "DC27B5DA8A3BAEC9EFF8F0DE9ED4ADFB1116243D" : "PIMPL\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "PIMPL",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
