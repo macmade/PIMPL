@@ -49,12 +49,17 @@ namespace XS
     namespace PIMPL
     {
         template<>
-        Object< XS_PIMPL_CLASS >::Object( void ): impl( new Object< XS_PIMPL_CLASS >::IMPL )
+        Object< XS_PIMPL_CLASS >::Object( void ): impl( new Object< XS_PIMPL_CLASS >::IMPL() )
         {}
         
         template<>
-        template< typename A1, typename ... A2 >
-        Object< XS_PIMPL_CLASS >::Object( A1 a1, A2 ... a2 ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a1, a2 ... ) )
+        template< typename ... A >
+        Object< XS_PIMPL_CLASS >::Object( A & ... a ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a ... ) )
+        {}
+        
+        template<>
+        template< typename ... A >
+        Object< XS_PIMPL_CLASS >::Object( const A & ... a ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a ... ) )
         {}
         
         template<>

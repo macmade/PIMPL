@@ -59,15 +59,21 @@ namespace XS
             public:
                 
                 /*!
-                 * @brief       Class constructor (no parameters)
-                 */
+                 * @brief       Class constructor (without parameters)
+                 */ 
                 Object( void );
                 
                 /*!
-                 * @brief       Class constructor (with parameters)
+                 * @brief       Class constructor (with optional parameters)
                  */
-                template< typename A1, typename ... A2 > 
-                Object( A1 a1, A2 ... a2 );
+                template< typename ... A > 
+                Object( A & ... a );
+                
+                /*!
+                 * @brief       Class constructor (with optional const parameters)
+                 */
+                template< typename ... A > 
+                Object( const A & ... a );
                 
                 /*!
                  * @brief       Class copy constructor
