@@ -10,9 +10,9 @@ script:
 - set -o pipefail && xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" test | xcpretty
 before_script:
 - ccache -s
+- ccache -z
 after_script:
 - ccache -s
-- ccache -z
 before_install:
 - bash Scripts/travis-before.sh
 after_success:

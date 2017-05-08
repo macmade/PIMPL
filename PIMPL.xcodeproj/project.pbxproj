@@ -65,7 +65,6 @@
 		053BEDC71B8EFE1E007D82A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053BEDE71B90ABB2007D82A4 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
 		053BEDE81B90ABB2007D82A4 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
-		053BEDF91B90B37E007D82A4 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		053BEE221B935C8D007D82A4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
 		053BEE231B935C8D007D82A4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
 		053BEE251B935C98007D82A4 /* Foobar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foobar.cpp; sourceTree = "<group>"; };
@@ -138,7 +137,6 @@
 				053BEE251B935C98007D82A4 /* Foobar.cpp */,
 				053BEE261B935C98007D82A4 /* Foobar.hpp */,
 				053BEDC71B8EFE1E007D82A4 /* Info.plist */,
-				053BEDF91B90B37E007D82A4 /* Prefix.pch */,
 				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
 			);
 			path = "Unit-Tests";
@@ -334,8 +332,6 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Unit-Tests/Prefix.pch";
 				HEADER_SEARCH_PATHS = PIMPL/include/;
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -353,8 +349,6 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Unit-Tests/Prefix.pch";
 				HEADER_SEARCH_PATHS = PIMPL/include/;
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
