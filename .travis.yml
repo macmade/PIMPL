@@ -1,7 +1,11 @@
 language: objective-c
+install:
+- gem install xcpretty
 script:
-- xctool -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" test
+- set -o pipefail && xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" build analyze test | xcpretty
 before_install:
 - bash Scripts/travis-before.sh
 after_success:
 - bash Scripts/travis-after.sh
+notifications:
+    slack: xs-labs:FXh1yLXNkpcVxKZhZU6icdhI
