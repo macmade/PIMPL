@@ -6,6 +6,7 @@ install:
 - gem install xcpretty
 - brew install ccache
 - PATH=$PATH:/usr/local/opt/ccache/libexec
+- brew install macmade/tap/xcode-coveralls
 script:
 - set -o pipefail && xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" test | xcpretty
 before_script:
@@ -13,8 +14,6 @@ before_script:
 - ccache -z
 after_script:
 - ccache -s
-before_install:
-- bash Scripts/travis-before.sh
 after_success:
 - bash Scripts/travis-after.sh
 notifications:
