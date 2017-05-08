@@ -1,8 +1,18 @@
 language: objective-c
+cache:
+    directories:
+    - $HOME/.ccache
 install:
 - gem install xcpretty
+- brew install ccache
+- PATH=$PATH:/usr/local/opt/ccache/libexec
 script:
 - set -o pipefail && xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" test | xcpretty
+before_script:
+- ccache -s
+after_script:
+- ccache -s
+- ccache -z
 before_install:
 - bash Scripts/travis-before.sh
 after_success:
