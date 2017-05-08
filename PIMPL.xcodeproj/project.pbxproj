@@ -10,8 +10,6 @@
 		050B83D91EB9151B0090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83D81EB9151B0090EA12 /* libc++.tbd */; };
 		053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */; };
 		053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */; };
-		053BEDEC1B90ABB2007D82A4 /* travis-after.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE71B90ABB2007D82A4 /* travis-after.sh */; };
-		053BEDED1B90ABB2007D82A4 /* travis-before.sh in Resources */ = {isa = PBXBuildFile; fileRef = 053BEDE81B90ABB2007D82A4 /* travis-before.sh */; };
 		053BEE241B935C8D007D82A4 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE221B935C8D007D82A4 /* Bar.cpp */; };
 		053BEE271B935C98007D82A4 /* Foobar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE251B935C98007D82A4 /* Foobar.cpp */; };
 		053BEE2A1B935CC4007D82A4 /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE281B935CC4007D82A4 /* Foo.cpp */; };
@@ -64,7 +62,6 @@
 		053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		053BEDC71B8EFE1E007D82A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053BEDE71B90ABB2007D82A4 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
-		053BEDE81B90ABB2007D82A4 /* travis-before.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		053BEE221B935C8D007D82A4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
 		053BEE231B935C8D007D82A4 /* Bar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bar.hpp; sourceTree = "<group>"; };
 		053BEE251B935C98007D82A4 /* Foobar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Foobar.cpp; sourceTree = "<group>"; };
@@ -157,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				053BEDE71B90ABB2007D82A4 /* travis-after.sh */,
-				053BEDE81B90ABB2007D82A4 /* travis-before.sh */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -277,8 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053BEDEC1B90ABB2007D82A4 /* travis-after.sh in Resources */,
-				053BEDED1B90ABB2007D82A4 /* travis-before.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
