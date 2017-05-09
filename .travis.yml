@@ -7,8 +7,11 @@ install:
 - brew install ccache
 - PATH=$PATH:/usr/local/opt/ccache/libexec
 - brew install macmade/tap/xcode-coveralls
+- export PYTHONUSERBASE=~/.local
+- easy_install --user scan-build
 script:
 - set -o pipefail && xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" test | xcpretty
+- set -o pipefail && scan-build --status-bugs xcodebuild -project "PIMPL.xcodeproj" -scheme "PIMPL-Tests" analyze | xcpretty
 before_script:
 - ccache -s
 - ccache -z
