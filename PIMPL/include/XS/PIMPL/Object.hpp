@@ -58,6 +58,9 @@ namespace XS
         {
             public:
                 
+                /* C++11 support is buggy on MSVC V120 toolset (see C4520)... */
+                #if !defined( _MSC_FULL_VER ) || _MSC_FULL_VER >= 190024215
+                
                 /*!
                  * @brief       Class constructor (without parameters)
                  */ 
@@ -74,6 +77,21 @@ namespace XS
                  */
                 template< typename ... A > 
                 Object( const A & ... a );
+                
+                #else
+                
+                /*!
+                 * @brief       Class constructor (no parameters)
+                 */
+                Object( void );
+                
+                /*!
+                 * @brief       Class constructor (with parameters)
+                 */
+                template< typename A1, typename ... A2 > 
+                Object( A1 a1, A2 ... a2 );
+                
+                #endif
                 
                 /*!
                  * @brief       Class copy constructor

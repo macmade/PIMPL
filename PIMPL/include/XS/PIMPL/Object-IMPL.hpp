@@ -48,6 +48,9 @@ namespace XS
 {
     namespace PIMPL
     {
+        /* C++11 support is buggy on MSVC V120 toolset (see C4520)... */
+        #if !defined( _MSC_FULL_VER ) || _MSC_FULL_VER >= 190024215
+        
         template<>
         Object< XS_PIMPL_CLASS >::Object( void ): impl( new Object< XS_PIMPL_CLASS >::IMPL() )
         {}
@@ -61,6 +64,19 @@ namespace XS
         template< typename ... A >
         Object< XS_PIMPL_CLASS >::Object( const A & ... a ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a ... ) )
         {}
+        
+        #else
+        
+        template<>
+        Object< XS_PIMPL_CLASS >::Object( void ): impl( new Object< XS_PIMPL_CLASS >::IMPL )
+        {}
+        
+        template<>
+        template< typename A1, typename ... A2 >
+        Object< XS_PIMPL_CLASS >::Object( A1 a1, A2 ... a2 ): impl( new Object< XS_PIMPL_CLASS >::IMPL( a1, a2 ... ) )
+        {}
+        
+        #endif
         
         template<>
         Object< XS_PIMPL_CLASS >::Object( const Object< XS_PIMPL_CLASS > & o ): impl( new Object< XS_PIMPL_CLASS >::IMPL( *( o.impl ) ) )
