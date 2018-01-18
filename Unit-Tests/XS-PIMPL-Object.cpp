@@ -32,8 +32,6 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
-#include <clang-warnings.h>
-
 /* Disabled warnings for GoogleMock */
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wglobal-constructors"
