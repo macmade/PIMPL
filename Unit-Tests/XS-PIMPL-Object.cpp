@@ -32,6 +32,12 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
+#ifdef _WIN32
+
+#include <gtest/gtest.h>
+
+#else
+
 /* Disabled warnings for GoogleMock */
 #ifdef __clang__
 #pragma clang diagnostic ignored "-Wglobal-constructors"
@@ -49,6 +55,8 @@
 
 #ifdef __clang__
 #pragma clang diagnostic pop
+#endif
+
 #endif
 
 #include "Foo.hpp"
