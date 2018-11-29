@@ -32,33 +32,8 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
-#ifdef _WIN32
-
-#include <gtest/gtest.h>
-
-#else
-
-/* Disabled warnings for GoogleMock */
-#ifdef __clang__
-#pragma clang diagnostic ignored "-Wglobal-constructors"
-#pragma clang diagnostic push
-#if __clang_major__ >= 7
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-#endif
-#pragma clang diagnostic ignored "-Wmissing-noreturn"
-#pragma clang diagnostic ignored "-Wpadded"
-#pragma clang diagnostic ignored "-Wused-but-marked-unused"
-#pragma clang diagnostic ignored "-Wdeprecated"
-#endif
-
-#include <GoogleMock/GoogleMock.h>
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-
-#endif
-
+#define XSTEST_GTEST_COMPAT
+#include <XSTest/XSTest.hpp>
 #include "Foo.hpp"
 #include "Bar.hpp"
 #include "Foobar.hpp"

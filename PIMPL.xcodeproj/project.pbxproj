@@ -8,58 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		050B83D91EB9151B0090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83D81EB9151B0090EA12 /* libc++.tbd */; };
+		0536389921B09FD50015CFA9 /* XSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0536389621B09FC70015CFA9 /* XSTest.framework */; };
 		053BEDB41B8EFDD7007D82A4 /* XS-PIMPL-Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */; };
-		053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */; };
 		053BEE241B935C8D007D82A4 /* Bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE221B935C8D007D82A4 /* Bar.cpp */; };
 		053BEE271B935C98007D82A4 /* Foobar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE251B935C98007D82A4 /* Foobar.cpp */; };
 		053BEE2A1B935CC4007D82A4 /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 053BEE281B935CC4007D82A4 /* Foo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		053BEDBC1B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+		0536389521B09FC70015CFA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			containerPortal = 0536389121B09FC70015CFA9 /* XSTest.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 05818F861A685AEA0072A469;
-			remoteInfo = GoogleMock;
+			remoteGlobalIDString = 05D526E721A864BC0025CCEB;
+			remoteInfo = XSTest;
 		};
-		053BEDBE1B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
+		0536389721B09FD10015CFA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05E96ABD1A68600C00204102;
-			remoteInfo = gmock;
-		};
-		053BEDC01B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05E96B1F1A68634900204102;
-			remoteInfo = gtest;
-		};
-		053BEDC21B8EFDE6007D82A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05818F901A685AEA0072A469;
-			remoteInfo = GoogleMockTests;
-		};
-		053BEDC51B8EFDF9007D82A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+			containerPortal = 0536389121B09FC70015CFA9 /* XSTest.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 05818F851A685AEA0072A469;
-			remoteInfo = GoogleMock;
+			remoteGlobalIDString = 05D526E621A864BC0025CCEB;
+			remoteInfo = XSTest;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		050B83D81EB9151B0090EA12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0536389121B09FC70015CFA9 /* XSTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XSTest.xcodeproj; path = Submodules/XSTest/XSTest.xcodeproj; sourceTree = "<group>"; };
 		053BEDA31B8EFCB6007D82A4 /* Object-IMPL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "Object-IMPL.hpp"; sourceTree = "<group>"; };
 		053BEDA41B8EFCB6007D82A4 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "XS-PIMPL-Object.cpp"; sourceTree = "<group>"; };
 		053BEDAC1B8EFDC1007D82A4 /* PIMPL-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIMPL-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		053BEDC71B8EFE1E007D82A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053BEDE71B90ABB2007D82A4 /* travis-after.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
 		053BEE221B935C8D007D82A4 /* Bar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bar.cpp; sourceTree = "<group>"; };
@@ -115,8 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0536389921B09FD50015CFA9 /* XSTest.framework in Frameworks */,
 				050B83D91EB9151B0090EA12 /* libc++.tbd in Frameworks */,
-				053BEDC41B8EFDF3007D82A4 /* GoogleMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +108,14 @@
 				050B83D81EB9151B0090EA12 /* libc++.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0536389221B09FC70015CFA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0536389621B09FC70015CFA9 /* XSTest.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		053BED9F1B8EFCB6007D82A4 /* PIMPL */ = {
@@ -177,17 +164,6 @@
 				053BEDA61B8EFCB6007D82A4 /* XS-PIMPL-Object.cpp */,
 			);
 			path = "Unit-Tests";
-			sourceTree = "<group>";
-		};
-		053BEDB61B8EFDE6007D82A4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */,
-				053BEDBF1B8EFDE6007D82A4 /* gmock.framework */,
-				053BEDC11B8EFDE6007D82A4 /* gtest.framework */,
-				053BEDC31B8EFDE6007D82A4 /* GoogleMockTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		053BEDE51B90ABB2007D82A4 /* Scripts */ = {
@@ -313,8 +289,8 @@
 		05BD89491A13FF4700A43CD8 = {
 			isa = PBXGroup;
 			children = (
+				0536389121B09FC70015CFA9 /* XSTest.xcodeproj */,
 				0572247B20112CB300DC0502 /* xcconfig */,
-				053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */,
 				053BED9F1B8EFCB6007D82A4 /* PIMPL */,
 				053BEDA51B8EFCB6007D82A4 /* Unit-Tests */,
 				053BEDE51B90ABB2007D82A4 /* Scripts */,
@@ -346,7 +322,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				053BEDC61B8EFDF9007D82A4 /* PBXTargetDependency */,
+				0536389821B09FD10015CFA9 /* PBXTargetDependency */,
 			);
 			name = "PIMPL-Tests";
 			productName = "PIMPL-Tests";
@@ -381,8 +357,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 053BEDB61B8EFDE6007D82A4 /* Products */;
-					ProjectRef = 053BEDB51B8EFDE6007D82A4 /* GoogleMock.xcodeproj */;
+					ProductGroup = 0536389221B09FC70015CFA9 /* Products */;
+					ProjectRef = 0536389121B09FC70015CFA9 /* XSTest.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -393,32 +369,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		053BEDBD1B8EFDE6007D82A4 /* GoogleMock.framework */ = {
+		0536389621B09FC70015CFA9 /* XSTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GoogleMock.framework;
-			remoteRef = 053BEDBC1B8EFDE6007D82A4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		053BEDBF1B8EFDE6007D82A4 /* gmock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = gmock.framework;
-			remoteRef = 053BEDBE1B8EFDE6007D82A4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		053BEDC11B8EFDE6007D82A4 /* gtest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = gtest.framework;
-			remoteRef = 053BEDC01B8EFDE6007D82A4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		053BEDC31B8EFDE6007D82A4 /* GoogleMockTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GoogleMockTests.xctest;
-			remoteRef = 053BEDC21B8EFDE6007D82A4 /* PBXContainerItemProxy */;
+			path = XSTest.framework;
+			remoteRef = 0536389521B09FC70015CFA9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -464,10 +419,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		053BEDC61B8EFDF9007D82A4 /* PBXTargetDependency */ = {
+		0536389821B09FD10015CFA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GoogleMock;
-			targetProxy = 053BEDC51B8EFDF9007D82A4 /* PBXContainerItemProxy */;
+			name = XSTest;
+			targetProxy = 0536389721B09FD10015CFA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
