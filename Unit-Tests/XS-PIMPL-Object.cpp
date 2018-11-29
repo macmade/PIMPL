@@ -32,6 +32,10 @@
  * @brief       Test case XS::PIMPL::Object
  */
 
+#ifdef _WIN32
+#define XSTEST_MAIN
+#endif
+
 #define XSTEST_GTEST_COMPAT
 #include <XSTest/XSTest.hpp>
 #include "Foo.hpp"
