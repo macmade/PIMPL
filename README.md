@@ -2,6 +2,7 @@ PIMPL
 =====
 
 [![Build Status](https://img.shields.io/travis/macmade/PIMPL.svg?branch=master&style=flat)](https://travis-ci.org/macmade/PIMPL)
+[![Build-AppVeyor](https://ci.appveyor.com/api/projects/status/github/macmade/PIMPL?svg=true)](https://ci.appveyor.com/project/macmade/PIMPL)
 [![Coverage Status](https://img.shields.io/coveralls/macmade/PIMPL.svg?branch=master&style=flat)](https://coveralls.io/r/macmade/PIMPL?branch=master)
 [![Issues](http://img.shields.io/github/issues/macmade/PIMPL.svg?style=flat)](https://github.com/macmade/PIMPL/issues)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)
