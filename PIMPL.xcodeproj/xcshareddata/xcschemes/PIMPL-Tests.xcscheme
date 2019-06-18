@@ -10,9 +10,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
       enableASanStackUseAfterReturn = "YES"
-      disableMainThreadChecker = "YES"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      disableMainThreadChecker = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -25,8 +25,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -39,10 +37,9 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       stopOnEveryUBSanitizerIssue = "YES"
+      migratedStopOnEveryIssue = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

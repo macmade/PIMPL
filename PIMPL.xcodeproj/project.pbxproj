@@ -347,10 +347,11 @@
 			};
 			buildConfigurationList = 05BD894D1A13FF4700A43CD8 /* Build configuration list for PBXProject "PIMPL" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 05BD89491A13FF4700A43CD8;
 			productRefGroup = 05BD89531A13FF4700A43CD8 /* Products */;
