@@ -17,7 +17,7 @@ Generic C++11 PIMPL implementation.
 License
 -------
 
-PIMPL is released under the terms of the Boost Software License - Version 1.0.
+PIMPL is released under the terms of the MIT License.
 
 Repository Infos
 ----------------
